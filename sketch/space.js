@@ -1,7 +1,9 @@
 function drawSpace() {
   push();
   translate(0, -500, 800);
-  fill(100);
+  specularMaterial(20, 20, 20);
+  shininess(20);
+  //fill(20);
 
   // bottom
   //texture(textureMat.concrete);
@@ -20,7 +22,13 @@ function drawSpace() {
   // left
   rotateY(HALF_PI);
   translate(-1000, 0, -2000);
+  push();
+  texture(textures.leftpanel);
+  push();
+  rotateY(-HALF_PI);
+  pop();
   plane(2000, 5000);
+  pop();
 
   // top
   rotateY(HALF_PI);
@@ -30,7 +38,10 @@ function drawSpace() {
   // right
   rotateY(HALF_PI);
   translate(-1000, 0, -2000);
+  push();
+  texture(textures.rightpanel);
   plane(2000, 5000);
+  pop();
   pop();
 }
 

@@ -27,7 +27,10 @@ let models = {
   'car_trunk': undefined
 }
 let textures = {
-  'backpanel': undefined
+  'backpanel': undefined,
+  'leftpanel': undefined,
+  'rightpanel': undefined,
+  'nightsky': undefined
 }
 let keymap;
 
@@ -49,6 +52,9 @@ function preload() {
   font_georgia = loadFont('assets/georgia.ttf');
   models.car_body = loadModel('assets/car_body2.obj');
   textures.backpanel = loadImage('assets/city.jpg');
+  textures.leftpanel = loadImage('assets/city_l.jpg');
+  textures.rightpanel = loadImage('assets/city_r.jpg');
+  textures.nightsky = loadImage('assets/nightsky.jpg');
   //sounds.bgm = loadSound('assets/bgm.mp3');
   sounds.walk = loadSound('assets/walk.mp3');
   // keymap = loadImage('assets/keymap.png');

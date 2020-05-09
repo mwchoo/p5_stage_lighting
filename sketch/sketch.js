@@ -50,7 +50,7 @@ let h = 20;
 
 function preload() {
   font_georgia = loadFont('assets/georgia.ttf');
-  models.car_body = loadModel('assets/car_body2.obj');
+  models.car_body = loadModel('assets/car_body.obj');
   textures.backpanel = loadImage('assets/city.jpg');
   textures.leftpanel = loadImage('assets/city_l.jpg');
   textures.rightpanel = loadImage('assets/city_r.jpg');

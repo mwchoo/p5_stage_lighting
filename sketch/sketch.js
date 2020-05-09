@@ -26,6 +26,9 @@ let models = {
   'car_door': undefined,
   'car_trunk': undefined
 }
+let textures = {
+  'backpanel': undefined
+}
 let keymap;
 
 let font_georgia;
@@ -44,11 +47,10 @@ let h = 20;
 
 function preload() {
   font_georgia = loadFont('assets/georgia.ttf');
-  // ToDo. add car 3d model
-  sounds.bgm = loadSound('assets/bgm.mp3');
+  models.car_body = loadModel('assets/car_body2.obj');
+  textures.backpanel = loadImage('assets/city.jpg');
+  //sounds.bgm = loadSound('assets/bgm.mp3');
   sounds.walk = loadSound('assets/walk.mp3');
-  sounds.groot = loadSound('assets/iamgroot.mp3');
-  sounds.bomb = loadSound('assets/fireworks.mp3');
   // keymap = loadImage('assets/keymap.png');
 }
 
@@ -70,8 +72,8 @@ function draw() {
 
   // scene control
   if (scene === 0) {
-    drawSplash();
-    return;
+    //drawSplash();
+    //return;
   }
 
   // show keymap
@@ -79,18 +81,35 @@ function draw() {
 
   // light setting
   pointLight(255, 255, 255, locX, locY, windowHeight / 2);
-  ambientLight(100);
+  ambientLight(200);
 
   // bgm control
+  /*
   if (!sounds.bgm.isPlaying()) {
     sounds.bgm.play();
   }
+   */
 
   // camera setting
   camera(X, Y, Z, centerX, centerY, centerZ, 0, 1, 0);
 
-  //drawSpace();
+  drawSpace();
+  drawStand();
   handleKeyDown();
+
+  /* CAR AREA */
+  push();
+  noStroke();
+  translate(0, 400, 0);
+  rotateZ(PI);
+  rotateY(0.3);
+  scale(4);
+  textureMode(NORMAL);
+  //fill(20, 20, 20);
+  specularMaterial(18, 15, 11);
+  shininess(20);
+  model(models.car_body);
+  pop();
 
   //rot += 0.25;
 }

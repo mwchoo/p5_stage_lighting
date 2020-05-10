@@ -33,6 +33,7 @@ let textures = {
   'rightpanel': undefined,
   'nightsky': undefined
 }
+let car;
 let keymap;
 
 let font_georgia;
@@ -76,6 +77,7 @@ function setup() {
   gl.disable(gl.DEPTH_TEST);*/
 
   cgSplashName = new Text("Car Show!", 100, -300, 0, 0, color(195, 56, 51, 1), font_georgia);
+  car = new Car(4, color(18, 15, 11));
   //scene_timer = new Timer(3000, handleScene);
 
   slider_hue = createSlider(0, 360, 0);
@@ -92,8 +94,8 @@ function setup() {
 
 function draw() {
   background(0);
-  let locX = mouseX - width / 2;
-  let locY = mouseY - height / 2;
+  //let locX = mouseX - width / 2;
+  //let locY = mouseY - height / 2;
 
   // scene control
   if (scene === 0) {
@@ -119,7 +121,7 @@ function draw() {
   spotLight(slider_hue.value(), 100, 100, spotPos, spotDir,
     radians(90), 1);
   //spotLight(255, 0, 0, locX, locY, 500, 0, 0, 500);
-  console.log(locX, locY);
+  //console.log(locX, locY);
   //pointLight(255, 255, 255, locX, locY, windowHeight / 2);
   //spotLight(255, 255, 255, locX, locY, 1000, 0, 0, -100, slider_angle.value(), slider_conc.value()); // PI/2, 600
 
@@ -136,7 +138,8 @@ function draw() {
   drawSpace();
   drawStand();
   //drawElecDisplay();
-  drawCar();
+  //drawCar();
+  car.display();
   handleKeyDown();
 
   rot += 0.02;

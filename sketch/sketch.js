@@ -95,8 +95,8 @@ function draw() {
 
   // light setting
   lights();
-  if (!sounds.bgm.isPlaying()) {
-    pointLight(100, 100, 100, sin(srot) * 4000, -1300, cos(srot) * 100 - 100); // TURN OFF WHEN THE SHOW IS BEGINNING
+  if (!sounds.bgm.isPlaying()) {  // TURN OFF WHEN THE SHOW IS BEGINNING
+    pointLight(100, 100, 100, sin(srot) * 4000, -1300, cos(srot) * 100 - 100);
   }
 
   srot += 0.01;
@@ -131,7 +131,6 @@ function draw() {
     handleDancingCar();
   }
   handleKeyDown();
-  console.log(rot);
 }
 
 function handleKeyDown() {

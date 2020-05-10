@@ -3,7 +3,7 @@ THIS CODE IS FOR CHOREOGRAPHY OF DANCING CAR
 Implemented by Minwoo Choo
  */
 
-function handleDancingCar() {
+function handleDancingCar() {  // chreography reader
   const cur_time = sounds.bgm.currentTime().toFixed(1).toString();
   console.log(cur_time);
   if (chreography[cur_time]) {

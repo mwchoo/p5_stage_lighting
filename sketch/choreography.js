@@ -1077,10 +1077,546 @@ const chreography = {
   },
   '51.0': function () {
     car.turnOffAllLight();
-    car.fog_light.left_white = true;
   },
-  '51.2': function () {
+
+  '51.2': function () {  // part 9
+    car.turnOnAllLight();
+  },
+  '51.4': function () {
     car.turnOffAllLight();
-    car.fog_light.right_white = true;
-  }
+  },
+
+  '52.8': function () {
+    car.turnOnAllLight();
+  },
+  '53.0': function () {
+    car.turnOffAllLight();
+  },
+
+  '54.2': function () {
+    car.turnOnAllLight();
+  },
+  '54.4': function () {
+    car.turnOffAllLight();
+  },
+
+  '54.8': function () {
+    car.turnOnAllLight();
+  },
+  '54.9': function () {
+    car.turnOffAllLight();
+  },
+  '55.1': function () {
+    car.turnOnAllLight();
+  },
+  '55.2': function () {
+    car.turnOffAllLight();
+  },
+
+  '55.6': function () {
+    car.turnOnAllLight();
+  },
+  '55.7': function () {
+    car.turnOffAllLight();
+  },
+  '55.9': function () {
+    car.turnOnAllLight();
+  },
+  '56.0': function () {
+    car.turnOffAllLight();
+  },
+
+  '56.3': function () {
+    car.turnOnAllLight();
+  },
+  '56.4': function () {
+    car.turnOffAllLight();
+  },
+  '56.8': function () {
+    car.turnOnAllLight();
+  },
+  '56.9': function () {
+    car.turnOffAllLight();
+  },
+  '57.1': function () {
+    car.turnOnAllLight();
+  },
+  '57.2': function () {
+    car.turnOffAllLight();
+  },
+
+  '57.4': function () {  // part 10 - door dance
+    car.door_wing.mode = 2;
+    car.door_wing.rot_angle = 4.71;
+    car.door_wing.dancing_factor = 1;
+    car.door_wing.rot_speed = 0.011;
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '57.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '57.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '58.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '58.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '58.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '58.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '58.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '59.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '59.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '59.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '59.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '59.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '60.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '60.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '60.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '60.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '60.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '61.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '61.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '61.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '61.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '61.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '62.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '62.2': function () {
+    car.turnOffAllLight();
+  },
+  '62.4': function () {
+    car.turnOffAllLight();
+  },
+  '62.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '62.8': function () {
+    car.turnOffAllLight();
+  },
+
+
+  '63.0': function () {  // part 11
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '63.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '63.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '63.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+
+  '63.8': function () {  // part 10
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '64.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '64.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '64.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '64.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '64.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '65.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '65.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '65.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '65.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '65.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '66.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '66.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '66.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '66.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '66.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '67.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '67.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '67.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '67.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '67.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '68.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '68.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '68.4': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '68.6': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '68.8': function () {
+    car.turnOffAllLight();
+    car.head_light.left2 = true;
+    car.head_light.right2 = true;
+    car.fog_light.right_yellow = true;
+  },
+  '69.0': function () {
+    car.turnOffAllLight();
+    car.head_light.left3 = true;
+    car.head_light.right1 = true;
+    car.fog_light.left_yellow = true;
+  },
+  '69.2': function () {
+    car.turnOffAllLight();
+    car.head_light.left1 = true;
+    car.head_light.left2 = true;
+    car.head_light.left3 = true;
+    car.head_light.right2 = true;
+    car.head_light.right1 = true;
+    car.head_light.right3 = true;
+    car.fog_light.right_yellow = true;
+  },
+
+  '69.4': function () {  // part 11
+    car.turnOffAllLight();
+  },
+  '69.6': function () {
+    car.turnOffAllLight();
+  },
+  '69.8': function () {
+    car.turnOnAllLight();
+  },
+  '70.0': function () {
+    car.turnOffAllLight();
+  },
+
+  '70.2': function () {
+    car.turnOffAllLight();
+  },
+  '70.4': function () {
+    car.turnOffAllLight();
+  },
+  '70.6': function () {
+    car.turnOnAllLight();
+  },
+  '70.8': function () {
+    car.turnOffAllLight();
+  },
+
+  '71.0': function () {
+    car.turnOffAllLight();
+  },
+  '71.2': function () {
+    car.turnOffAllLight();
+  },
+  '71.4': function () {
+    car.turnOnAllLight();
+  },
+  '71.6': function () {
+    car.turnOffAllLight();
+  },
+
+  '71.8': function () {
+    car.turnOffAllLight();
+  },
+  '72.0': function () {
+    car.turnOffAllLight();
+  },
+  '72.2': function () {
+    car.turnOnAllLight();
+  },
+  '72.4': function () {
+    car.turnOffAllLight();
+  },
 }

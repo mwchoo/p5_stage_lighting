@@ -92,7 +92,7 @@ function setup() {
   srot = 0;
 
   sounds.bgm.play();
-  sounds.bgm.jump(44);
+  sounds.bgm.jump(69);
 }
 
 function draw() {

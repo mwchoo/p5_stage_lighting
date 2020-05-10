@@ -18,7 +18,7 @@ class Car {  // Implemented by Minwoo Choo
     }
     this.door_wing = {
       'mode': 0, // [0]: close, [1]: open, [2] dance, [3] stop
-      'rot_angle': 6.28,  // open(6.28~4.71), close(4.71~6.28), dancing(4.66~5.33)
+      'rot_angle': 6.28,  // open(6.28~4.71), close(4.71~6.28), dancing(4.66~5.20~5.33)
       'rot_speed': 0.01,
       'dancing_factor': 1,
       'direction': true
@@ -114,7 +114,7 @@ class Car {  // Implemented by Minwoo Choo
           this.door_wing.direction = !direction;
         }
       } else {
-        if (rot_angle < 5.33 * dancing_factor) {
+        if (rot_angle < 5.20 * dancing_factor) {
           this.door_wing.rot_angle += rot_speed;
         } else {
           this.door_wing.direction = !direction;

@@ -72,7 +72,7 @@ function setup() {
   gl = this._renderer.GL;
   gl.disable(gl.DEPTH_TEST);*/
 
-  cgSplashName = new Text("Car Show!", 100, -300, 0, 0, color(195, 56, 51, 1), font_georgia);
+  cgSplashName = new Text("Car Show!", 100, -300, 0, 0, color(255, 255, 255, 1), font_georgia);
   car = new Car(4, color(18, 15, 11));
   //scene_timer = new Timer(3000, handleScene);
 
@@ -89,12 +89,9 @@ function draw() {
 
   // scene control
   if (scene === 0) {
-    //drawSplash();
-    //return;
+    drawSplash();
+    return;
   }
-
-  // show keymap
-  //image(keymap, -1000, -500);
 
   // light setting
   lights();
@@ -108,13 +105,6 @@ function draw() {
   spotDir = p5.Vector.sub(modelPos, spotPos);
   spotLight(0, 100, 100, spotPos, spotDir, radians(90), 1);
 
-  // bgm control
-  /*
-  if (!sounds.bgm.isPlaying()) {
-    sounds.bgm.play();
-  }
-   */
-
   // camera setting
   camera(X, Y, Z, centerX, centerY, centerZ, 0, 1, 0);
 
@@ -126,7 +116,6 @@ function draw() {
       car.turnOffAllLight();
     }
     if (rot > 2 * PI) {
-      //car.turnOnAllLight();
       sounds.bgm.play();
       isPlayed = true;
     }

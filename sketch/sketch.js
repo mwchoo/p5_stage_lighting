@@ -64,7 +64,7 @@ function preload() {
   textures.leftpanel = loadImage('assets/city_l.jpg');
   textures.rightpanel = loadImage('assets/city_r.jpg');
   textures.nightsky = loadImage('assets/nightsky.jpg');
-  //sounds.bgm = loadSound('assets/bgm.mp3');
+  sounds.bgm = loadSound('assets/bgm.mp3');
   sounds.walk = loadSound('assets/walk.mp3');
   // keymap = loadImage('assets/keymap.png');
 }
@@ -90,10 +90,14 @@ function setup() {
   modelPos = new p5.Vector(-200, 1000, 0);
   mrot = 0;
   srot = 0;
+
+  sounds.bgm.play();
+  sounds.bgm.jump(44);
 }
 
 function draw() {
   background(0);
+  console.log(sounds.bgm.currentTime().toFixed(1));
   //let locX = mouseX - width / 2;
   //let locY = mouseY - height / 2;
 
@@ -110,7 +114,9 @@ function draw() {
   //pointLight(255, 255, 255, locX, locY, windowHeight / 2);
   //ambientLight(200);
   lights();
-  pointLight(100, 100, 100, sin(rot) * 4000, -1300, cos(rot) * 100 - 100); // TURN OFF WHEN THE SHOW IS BEGINNING
+  if (!sounds.bgm.isPlaying()) {
+    pointLight(100, 100, 100, sin(rot) * 4000, -1300, cos(rot) * 100 - 100); // TURN OFF WHEN THE SHOW IS BEGINNING
+  }
 
   // setup lighting
   srot += 0.01;
@@ -140,6 +146,11 @@ function draw() {
   //drawElecDisplay();
   //drawCar();
   car.display();
+
+  if (sounds.bgm.isPlaying()) {
+    handleDancingCar();
+  }
+
   handleKeyDown();
 
   rot += 0.02;

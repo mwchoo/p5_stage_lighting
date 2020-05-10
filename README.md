@@ -26,4 +26,4 @@ P Key: screen shot
 ```
 
 ## Demo
-[https://mwchoo.github.io/AAT4001/p6/index.html](https://mwchoo.github.io/AAT4001/p5/index.html)
+[https://mwchoo.github.io/AAT4001/p6/index.html](https://mwchoo.github.io/AAT4001/p6/index.html)

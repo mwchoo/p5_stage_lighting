@@ -1035,36 +1035,44 @@ const chreography = {
   },
   '49.4': function () {
     car.turnOffAllLight();
+    car.head_light.right2 = true;
     car.fog_light.left_white = true;
   },
   '49.6': function () {
     car.turnOffAllLight();
+    car.head_light.right2 = true;
     car.fog_light.right_white = true;
   },
 
   '49.8': function () {
     car.turnOffAllLight();
+    car.head_light.left1 = true;
     car.fog_light.left_white = true;
   },
   '50.0': function () {
     car.turnOffAllLight();
+    car.head_light.left1 = true;
     car.fog_light.right_white = true;
   },
   '50.2': function () {
     car.turnOffAllLight();
+    car.head_light.right2 = true;
     car.fog_light.left_white = true;
   },
   '50.4': function () {
     car.turnOffAllLight();
+    car.head_light.right2 = true;
     car.fog_light.right_white = true;
   },
 
   '50.6': function () {
     car.turnOffAllLight();
+    car.head_light.left1 = true;
     car.fog_light.left_white = true;
   },
   '50.8': function () {
     car.turnOffAllLight();
+    car.head_light.left1 = true;
     car.fog_light.right_white = true;
   },
   '51.0': function () {
@@ -1074,5 +1082,5 @@ const chreography = {
   '51.2': function () {
     car.turnOffAllLight();
     car.fog_light.right_white = true;
-  },
+  }
 }

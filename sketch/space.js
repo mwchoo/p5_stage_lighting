@@ -50,12 +50,21 @@ function drawStand() {
   translate(0, 430, 0);
   noStroke();
   specularMaterial(60, 60, 60);
-  shininess(40);
+  shininess(30);
   cylinder(600, 60);
 
   translate(0, 40, 0);
   specularMaterial(40, 40, 40);
   shininess(100);
   box(3998, 60, 1800);
+  pop();
+}
+
+function drawElecDisplay() {
+  push();
+  translate(0, -500, 0);
+  noStroke();
+  texture(textures.nightsky);
+  cylinder(650, 400, 24, 1, false, false);
   pop();
 }

@@ -23,7 +23,8 @@ let sounds = {
 }
 let models = {
   'car_body': undefined,
-  'car_door': undefined,
+  'car_door_l': undefined,
+  'car_door_r': undefined,
   'car_trunk': undefined
 }
 let textures = {
@@ -48,9 +49,16 @@ let centerY = 0;
 let centerZ = 0;
 let h = 20;
 
+let slider_hue, slider_angle, slider_conc;
+//let statue;
+let spotPos, spotDir, modelPos;
+let mrot, srot;
+
 function preload() {
   font_georgia = loadFont('assets/georgia.ttf');
   models.car_body = loadModel('assets/car_body.obj');
+  models.car_door_l = loadModel('assets/car_door_l.obj');
+  models.car_door_r = loadModel('assets/car_door_r.obj');
   textures.backpanel = loadImage('assets/city.jpg');
   textures.leftpanel = loadImage('assets/city_l.jpg');
   textures.rightpanel = loadImage('assets/city_r.jpg');
@@ -69,6 +77,17 @@ function setup() {
 
   cgSplashName = new Text("Car Show!", 100, -300, 0, 0, color(195, 56, 51, 1), font_georgia);
   //scene_timer = new Timer(3000, handleScene);
+
+  slider_hue = createSlider(0, 360, 0);
+  slider_hue.position(10, 10);
+  slider_angle = createSlider(3, 90, 0);
+  slider_angle.position(10, 30);
+  slider_conc = createSlider(1, 300, 0);
+  slider_conc.position(10, 50);
+  spotPos = new p5.Vector(-1000, 2000, 200);
+  modelPos = new p5.Vector(-200, 1000, 0);
+  mrot = 0;
+  srot = 0;
 }
 
 function draw() {
@@ -86,8 +105,23 @@ function draw() {
   //image(keymap, -1000, -500);
 
   // light setting
-  pointLight(255, 255, 255, locX, locY, windowHeight / 2);
-  ambientLight(200);
+  //pointLight(255, 255, 255, locX, locY, windowHeight / 2);
+  //ambientLight(200);
+  lights();
+  pointLight(100, 100, 100, sin(rot) * 4000, -1300, cos(rot) * 100 - 100); // TURN OFF WHEN THE SHOW IS BEGINNING
+
+  // setup lighting
+  srot += 0.01;
+  spotPos.x = 200 * cos(srot);
+  spotPos.y = 200 * sin(srot);
+  spotDir = p5.Vector.sub(modelPos, spotPos);
+  //console.log(spotPos, spotDir);
+  spotLight(slider_hue.value(), 100, 100, spotPos, spotDir,
+    radians(90), 1);
+  //spotLight(255, 0, 0, locX, locY, 500, 0, 0, 500);
+  console.log(locX, locY);
+  //pointLight(255, 255, 255, locX, locY, windowHeight / 2);
+  //spotLight(255, 255, 255, locX, locY, 1000, 0, 0, -100, slider_angle.value(), slider_conc.value()); // PI/2, 600
 
   // bgm control
   /*
@@ -101,23 +135,11 @@ function draw() {
 
   drawSpace();
   drawStand();
+  //drawElecDisplay();
+  drawCar();
   handleKeyDown();
 
-  /* CAR AREA */
-  push();
-  noStroke();
-  translate(0, 400, 0);
-  rotateZ(PI);
-  rotateY(0.3);
-  scale(4);
-  textureMode(NORMAL);
-  //fill(20, 20, 20);
-  specularMaterial(18, 15, 11);
-  shininess(20);
-  model(models.car_body);
-  pop();
-
-  //rot += 0.25;
+  rot += 0.02;
 }
 
 function handleKeyDown() {

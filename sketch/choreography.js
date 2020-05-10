@@ -12,6 +12,7 @@ function handleDancingCar() {
 
 const chreography = {
   '0.0': function () {  // initial
+    rot = 0;
     car.door_wing.mode = 0;
     car.turnOffAllLight();
   },
@@ -1619,4 +1620,81 @@ const chreography = {
   '72.4': function () {
     car.turnOffAllLight();
   },
+
+  '72.6': function () {
+    car.turnOffAllLight();
+  },
+  '72.8': function () {
+    car.turnOffAllLight();
+  },
+  '73.0': function () {
+    car.turnOnAllLight();
+  },
+  '73.2': function () {
+    car.turnOffAllLight();
+  },
+
+  '73.4': function () {
+    car.turnOffAllLight();
+  },
+  '73.6': function () {
+    car.turnOffAllLight();
+  },
+  '73.8': function () {
+    car.turnOnAllLight();
+  },
+  '74.0': function () {
+    car.turnOffAllLight();
+  },
+
+  '74.2': function () {
+    car.turnOffAllLight();
+  },
+  '74.4': function () {
+    car.turnOffAllLight();
+  },
+  '74.6': function () {
+    car.turnOnAllLight();
+  },
+  '74.8': function () {
+    car.turnOffAllLight();
+  },
+
+  '75.0': function () {
+    car.turnOffAllLight();
+  },
+  '75.2': function () {
+    car.turnOffAllLight();
+  },
+  '75.4': function () {
+    car.turnOnAllLight();
+  },
+  '75.6': function () {
+    car.turnOffAllLight();
+  },
+
+  '75.8': function () {
+    car.turnOffAllLight();
+  },
+  '76.0': function () {
+    car.turnOffAllLight();
+  },
+  '76.2': function () {  // door close
+    car.door_wing.mode = 0;
+    car.door_wing.rot_angle = 4.71;
+    car.turnOnAllLight();
+  },
+  '79.4': function () {
+    car.turnOffAllLight();
+  },
+  '79.5': function () {
+    car.turnOnAllLight();
+  },
+  '79.6': function () {
+    car.turnOffAllLight();
+  },
+
+  '82.0': function () {  // show end
+    car.turnOnAllLight();
+  }
 }

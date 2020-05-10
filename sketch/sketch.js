@@ -151,10 +151,6 @@ function handleKeyDown() {
   }
 }
 
-function mouseDragged() {
-  //rot += 0.1;
-}
-
 function keyPressed() {
   if (keyCode === UP_ARROW || keyCode === DOWN_ARROW || keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW) {
     if (!sounds.walk.isPlaying()) {

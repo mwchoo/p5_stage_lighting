@@ -1342,7 +1342,6 @@ const chreography = {
     car.turnOffAllLight();
   },
 
-
   '63.0': function () {  // part 11
     car.turnOffAllLight();
     car.head_light.left3 = true;

@@ -49,6 +49,7 @@ let h = 20;
 
 let spotPos, spotDir, modelPos;
 let mrot, srot;
+let isPlayed = false;
 
 function preload() {
   font_georgia = loadFont('assets/georgia.ttf');
@@ -80,7 +81,7 @@ function setup() {
   mrot = 0;
   srot = 0;
 
-  sounds.bgm.play();
+  //sounds.bgm.play();
 }
 
 function draw() {
@@ -98,7 +99,7 @@ function draw() {
   // light setting
   lights();
   if (!sounds.bgm.isPlaying()) {
-    pointLight(100, 100, 100, sin(rot) * 4000, -1300, cos(rot) * 100 - 100); // TURN OFF WHEN THE SHOW IS BEGINNING
+    pointLight(100, 100, 100, sin(srot) * 4000, -1300, cos(srot) * 100 - 100); // TURN OFF WHEN THE SHOW IS BEGINNING
   }
 
   srot += 0.01;
@@ -118,16 +119,30 @@ function draw() {
   camera(X, Y, Z, centerX, centerY, centerZ, 0, 1, 0);
 
   drawSpace();
+  drawStage();
+  push();
+  if (!sounds.bgm.isPlaying() && !isPlayed) {
+    if (rot === 0) {
+      car.turnOffAllLight();
+    }
+    if (rot > 2 * PI) {
+      //car.turnOnAllLight();
+      sounds.bgm.play();
+      isPlayed = true;
+    }
+    rotateY(rot);
+    rot += 0.02;
+  }
   drawStand();
   //drawElecDisplay();
   car.display();
+  pop();
 
   if (sounds.bgm.isPlaying()) {
     handleDancingCar();
   }
   handleKeyDown();
-
-  rot += 0.02;
+  console.log(rot);
 }
 
 function handleKeyDown() {

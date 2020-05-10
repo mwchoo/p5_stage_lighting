@@ -52,8 +52,12 @@ function drawStand() {
   specularMaterial(60, 60, 60);
   shininess(30);
   cylinder(600, 60);
+  pop();
+}
 
-  translate(0, 40, 0);
+function drawStage() {
+  push();
+  translate(0, 470, 0);
   specularMaterial(40, 40, 40);
   shininess(100);
   box(3998, 60, 1800);

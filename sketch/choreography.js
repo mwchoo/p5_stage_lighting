@@ -1328,6 +1328,7 @@ const chreography = {
     car.turnOffAllLight();
   },
   '62.6': function () {
+    car.door_wing.mode = 3;  // stop wing door
     car.turnOffAllLight();
     car.head_light.left1 = true;
     car.head_light.left2 = true;
@@ -1368,6 +1369,7 @@ const chreography = {
   },
 
   '63.8': function () {  // part 10
+    car.door_wing.mode = 2;  // resume wing door
     car.turnOffAllLight();
     car.head_light.left1 = true;
     car.head_light.right3 = true;

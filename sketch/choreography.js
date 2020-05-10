@@ -5,6 +5,7 @@ Implemented by Minwoo Choo
 
 function handleDancingCar() {
   const cur_time = sounds.bgm.currentTime().toFixed(1).toString();
+  console.log(cur_time);
   if (chreography[cur_time]) {
     chreography[cur_time]();
   }

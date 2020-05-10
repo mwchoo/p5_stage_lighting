@@ -2,10 +2,9 @@
 2020-1 Computer Grapics :: PROJECT 6 - STAGE LIGHTING
 20141150 Minwoo Choo
 
-Inspired by dancing Tesla Model X
+Inspired by easter egg of Tesla Model X (Lighting Show)
 
 < MANUAL >
-mouseX, Y: control the position of the light
 ARROW_UP Key: go forward
 ARROW_DOWN Key: go backward
 ARROW_LEFT Key: move the camera to the left
@@ -34,7 +33,7 @@ let textures = {
   'nightsky': undefined
 }
 let car;
-let keymap;
+//let keymap;
 
 let font_georgia;
 let cgSplashName;
@@ -50,8 +49,6 @@ let centerY = 0;
 let centerZ = 0;
 let h = 20;
 
-let slider_hue, slider_angle, slider_conc;
-//let statue;
 let spotPos, spotDir, modelPos;
 let mrot, srot;
 
@@ -80,26 +77,16 @@ function setup() {
   car = new Car(4, color(18, 15, 11));
   //scene_timer = new Timer(3000, handleScene);
 
-  slider_hue = createSlider(0, 360, 0);
-  slider_hue.position(10, 10);
-  slider_angle = createSlider(3, 90, 0);
-  slider_angle.position(10, 30);
-  slider_conc = createSlider(1, 300, 0);
-  slider_conc.position(10, 50);
   spotPos = new p5.Vector(-1000, 2000, 200);
   modelPos = new p5.Vector(-200, 1000, 0);
   mrot = 0;
   srot = 0;
 
   sounds.bgm.play();
-  sounds.bgm.jump(75);
 }
 
 function draw() {
   background(0);
-  console.log(sounds.bgm.currentTime().toFixed(1));
-  //let locX = mouseX - width / 2;
-  //let locY = mouseY - height / 2;
 
   // scene control
   if (scene === 0) {
@@ -111,25 +98,16 @@ function draw() {
   //image(keymap, -1000, -500);
 
   // light setting
-  //pointLight(255, 255, 255, locX, locY, windowHeight / 2);
-  //ambientLight(200);
   lights();
   if (!sounds.bgm.isPlaying()) {
     pointLight(100, 100, 100, sin(rot) * 4000, -1300, cos(rot) * 100 - 100); // TURN OFF WHEN THE SHOW IS BEGINNING
   }
 
-  // setup lighting
   srot += 0.01;
   spotPos.x = 200 * cos(srot);
   spotPos.y = 200 * sin(srot);
   spotDir = p5.Vector.sub(modelPos, spotPos);
-  //console.log(spotPos, spotDir);
-  spotLight(slider_hue.value(), 100, 100, spotPos, spotDir,
-    radians(90), 1);
-  //spotLight(255, 0, 0, locX, locY, 500, 0, 0, 500);
-  //console.log(locX, locY);
-  //pointLight(255, 255, 255, locX, locY, windowHeight / 2);
-  //spotLight(255, 255, 255, locX, locY, 1000, 0, 0, -100, slider_angle.value(), slider_conc.value()); // PI/2, 600
+  spotLight(0, 100, 100, spotPos, spotDir, radians(90), 1);
 
   // bgm control
   /*
@@ -144,13 +122,11 @@ function draw() {
   drawSpace();
   drawStand();
   //drawElecDisplay();
-  //drawCar();
   car.display();
 
   if (sounds.bgm.isPlaying()) {
     handleDancingCar();
   }
-
   handleKeyDown();
 
   rot += 0.02;

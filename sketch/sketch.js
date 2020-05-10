@@ -16,9 +16,7 @@ P Key: screen shot
 let scene = 0;
 let sounds = {
   'bgm': undefined,
-  'walk': undefined,
-  'car_starting': undefined,
-  'car_drive': undefined
+  'walk': undefined
 }
 let models = {
   'car_body': undefined,

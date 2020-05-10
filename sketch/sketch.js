@@ -116,6 +116,7 @@ function draw() {
       car.turnOffAllLight();
     }
     if (rot > 2 * PI) {
+      getAudioContext().resume();
       sounds.bgm.play();
       isPlayed = true;
     }

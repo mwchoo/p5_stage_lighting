@@ -22,7 +22,8 @@ P Key: screen shot
 
 ## Description
 ```
-
+github page 대역폭이 낮아서
+로딩하는 데에 시간이 오래걸립니다..
 ```
 
 ## Demo
